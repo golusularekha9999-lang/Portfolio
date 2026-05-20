@@ -1,0 +1,264 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MUSIC | PLAYER </title>
+    <style>
+body{
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   height:50vh;
+   margin:50px;;
+   background:#0f172a;
+}
+.box{
+   width:500px;
+   height:500px;
+   background:#1e293b;
+   padding:30px;
+   border-radius:20px;
+   box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+img{
+   width:100%;
+   border-radius:15px;
+}
+button{
+   background:#38bdf8;
+   color:white;
+   border:none;
+   padding:12px 20px;
+   border-radius:10px;
+   cursor:pointer;
+   font-size:16px;
+   transition:0.3s;
+}
+     .container{
+   width:400px;
+   background:#1e293b;
+   padding:30px;
+   border-radius:20px;
+   box-shadow:0 10px 30px rgba(0,0,0,0.3);
+   margin-top: 400px;
+}
+span{
+    color: aliceblue;
+}
+h1{
+    text-align: left;
+    margin-bottom: auto;
+}
+  button:hover{
+   background:#0ea5e9;
+   transform:scale(1.05);
+}
+
+
+        
+    </style>
+</head>
+<body>
+    <h1><span>Music-Player</span></h1>
+        <div class="box">
+                <section id="image">
+                     <img src="image.jpg">
+                </section>
+                <section id="song-name">
+                     <audio id="song" src="song.mp3"></audio>
+                </section>
+        </div>
+        <div class="container">    
+                <section id="range-bar">
+                      <input type="range" id="progress">
+                </section>
+                <div class="buttons">
+                        <button>previous</button>
+        
+                        <button>play</button>
+                        <button>next</button>
+                </div>
+                <div style="margin-top : 15px; "></div>
+                        <label for="volume-slider">Volume :</label> 
+                        <input type="range"  id="volume-slider" min="0" max="100" value="100" >
+                     <span id="volumevalue">100</span>
+                </div>
+                
+        </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSIC PLAYER</title>
+
+    <style>
+
+        body{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            margin:0;
+            background:#0f172a;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        h1{
+            color:white;
+            margin-bottom:20px;
+        }
+
+        /* TOP SONG BOX */
+
+        .box{
+            width:350px;
+            background:#1e293b;
+            padding:30px;
+            border-radius:20px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.3);
+            text-align:center;
+        }
+
+        img{
+            width:100%;
+            border-radius:15px;
+        }
+
+        #song-name{
+            color:white;
+            margin-top:15px;
+            font-size:22px;
+        }
+
+        /* CONTROLS BOX */
+
+        .container{
+            width:350px;
+            background:#1e293b;
+            padding:25px;
+            border-radius:20px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.3);
+            margin-top:20px;
+        }
+
+        /* PROGRESS BAR */
+
+        #progress{
+            width:100%;
+            cursor:pointer;
+            accent-color:#38bdf8;
+        }
+
+        /* BUTTONS */
+
+        .buttons{
+            display:flex;
+            justify-content:center;
+            gap:15px;
+            margin-top:20px;
+        }
+
+        button{
+            background:#38bdf8;
+            color:white;
+            border:none;
+            padding:12px 20px;
+            border-radius:10px;
+            cursor:pointer;
+            font-size:16px;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:#0ea5e9;
+            transform:scale(1.05);
+        }
+
+        /* VOLUME */
+
+        .volume{
+            margin-top:20px;
+            color:white;
+        }
+
+        #volume-slider{
+            width:100%;
+            margin-top:10px;
+            accent-color:#38bdf8;
+            cursor:pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>🎵 Music Player</h1>
+
+    <!-- SONG DISPLAY BOX -->
+
+    <div class="box">
+
+        <section id="image">
+            <img src="image.jpg" alt="song image">
+        </section>
+
+      
+
+        <audio id="song" src="song.mp3"></audio>
+
+    </div>
+
+    <!-- CONTROLS BOX -->
+
+    <div class="container">
+
+        <!-- PROGRESS BAR -->
+
+        <section id="range-bar">
+            <input type="range" id="progress">
+        </section>
+
+        <!-- BUTTONS -->
+
+        <div class="buttons">
+
+            <button>⏮</button>
+
+     
+
+            <button>▶</button>
+
+            <button>⏭</button>
+
+        </div>
+
+        <!-- VOLUME -->
+
+        <div class="volume">
+
+            <label for="volume-slider">
+                Volume
+            </label>
+
+            <input 
+                type="range"
+                id="volume-slider"
+                min="0"
+                max="100"
+                value="100"
+            >
+
+        </div>
+
+    </div>
+     <script src="music.js"></script>
+</body>
+</html>
